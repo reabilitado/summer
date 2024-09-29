@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x) :3</title>
+    
+    <!-- Adicionando o favicon -->
+    <link rel="icon" href="imagens/meu-icone.png" type="image/x-icon">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Impede o scroll */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Para adicionar título acima do botão */
+            justify-content: center;
+            align-items: center;
+            background-image: url('imagens/nova-imagem.jpg'); /* Atualize aqui */
+            background-size: cover;
+            background-position: center;
+            position: relative; /* Necessário para posicionar o player no canto */
+            text-align: center; /* Centraliza o texto */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+        }
+
+        /* Estilo do botão flutuante */
+        #botaoFlutuante {
+            position: absolute;
+            width: 80px; /* Largura do botão */
+            height: 80px; /* Altura do botão */
+            background-color: #81CDC6; /* Cor do botão */
+            border: none;
+            border-radius: 50%; /* Torna o botão redondo */
+            cursor: pointer;
+            animation: mover 8s infinite alternate ease-in-out; /* Animação mais rápida */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+            transition: transform 0.3s, background-color 0.3s; /* Transições suaves */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centraliza o ícone */
+            font-size: 24px; /* Tamanho do ícone */
+        }
+
+        /* Efeito ao passar o mouse sobre o botão */
+        #botaoFlutuante:hover {
+            transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+            background-color: #69B0A9; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Animação para mover o botão suavemente */
+        @keyframes mover {
+            0% {
+                top: 10%;
+                left: 10%;
+            }
+            25% {
+                top: 30%;
+                left: 70%;
+            }
+            50% {
+                top: 60%;
+                left: 20%;
+            }
+            75% {
+                top: 50%;
+                left: 80%;
+            }
+            100% {
+                top: 80%;
+                left: 40%;
+            }
+        }
+
+        /* Estilizando o player de áudio */
+        audio {
+            position: absolute;
+            bottom: 20px; /* Distância do fundo */
+            right: 20px; /* Distância da direita */
+            width: 150px; /* Largura do player */
+            outline: none; /* Remove a borda padrão */
+            padding: 5px; /* Espaçamento interno */
+            background: none; /* Remove a cor de fundo */
+        }
+
+        /* Ajuste de cor para os controles */
+        audio::-webkit-media-controls-panel {
+            background: none; /* Remove a cor de fundo do painel */
+        }
+        
+        audio::-webkit-media-controls-play-button {
+            background: none; /* Remove a cor de fundo do botão de play */
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background: none; /* Remove a cor de fundo do controle de volume */
+        }
+
+        /* Ajusta a cor dos textos dos controles para serem visíveis */
+        audio::-webkit-media-controls-current-time,
+        audio::-webkit-media-controls-time-remaining {
+            color: white; /* Cor do tempo */
+        }
+    </style>
+</head>
+<body>
+    <!-- Música de fundo com controles -->
+    <audio controls autoplay loop>
+        <source src="musica/sua-musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <!-- Botão que se move suavemente -->
+    <button id="botaoFlutuante" onclick="window.open('https://files.catbox.moe/qs22ae.mp4', '_blank')">
+        <span style="font-size: 24px;">❤️</span> <!-- Ícone de coração -->
+    </button>
+</body>
+</html>
